@@ -143,10 +143,10 @@
       //将表头和内容输出
       $header.appendTo($this);
       $content.appendTo($this);
-      //按Option生成内容部分
-      self.setDate($data('currentDate'));
       //触发事件
       $data('onInit')($this);
+      //按Option生成内容部分
+      self.setDate($data('currentDate'));
     };
 
     if (args == undefined || args.constructor == Object) {
