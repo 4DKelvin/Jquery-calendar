@@ -1,0 +1,91 @@
+.ui-calendar *,
+.ui-calendar:before, .ui-calendar:after,
+.ui-calendar *:before, .ui-calendar *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+}
+
+.ui-calendar {
+  display: table;
+  width: 100%;
+  border-right: 1px solid #cfcfcf;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.ui-calendar.loading {
+  position: relative;
+}
+
+.ui-calendar.loading:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: .8;
+  background-image: url(http://img0.hx.com/magazine/img/load.gif);
+  background-color: white;
+  background-size: 32px 32px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  z-index: 10;
+}
+
+.ui-header .ui-date:first-child,
+.ui-content .ui-date {
+  border-left: 1px solid #cfcfcf;
+}
+
+.ui-calendar .ui-header, .ui-calendar .ui-week {
+  display: table-row;
+}
+
+.ui-content {
+  display: table-row-group;
+}
+
+.ui-calendar .ui-date {
+  width: 14.28%;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  border-top: 1px solid #cfcfcf;
+}
+
+.ui-header .ui-date {
+  height: 65px;
+}
+
+.ui-content .ui-date {
+  height: 90px;
+  background-color: #f6f6f6;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+.ui-date.enable-date {
+  background: #ffffff;
+  color: #000000;
+}
+
+.ui-date.enable-date:hover, .ui-date.enable-date.active {
+  background-color: #23b32d;
+  cursor: pointer;
+  color: white;
+}
+
+.ui-date i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+  font-style: normal;
+}
+
